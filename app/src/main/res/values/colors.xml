@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bt_accent">#00B8D4</color>
+    <color name="notification_bg">#ffff5722</color>
+    <color name="media_item_icon_playing">@color/bt_accent</color>
+    <color name="media_item_icon_not_playing">#ccc</color>
+
+    <color name="colorPrimary">#ffff5722</color>
+    <color name="colorPrimaryDark">#ffbf360c</color>
+    <color name="colorAccent">#ffff5722</color>
+    <color name="white">#FFFFFF</color>
+</resources>

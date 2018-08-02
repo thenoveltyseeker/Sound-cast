@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- playback controls -->
+    <dimen name="playback_controls_padding">8dp</dimen>
+
+</resources>
