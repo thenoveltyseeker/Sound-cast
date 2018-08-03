@@ -21,18 +21,23 @@ public class SongsLibraryTest {
 
 	@Test
 	public void getNextSong_test() {
+		//Comment picasso image loading and test
 		createMetadata();
 		Assert.assertThat(SongsLibrary.getNextSong("2")
 				.equals("3"), is(true));
 	}
+
 	@Test
 	public void getPrevSong_test() {
+		//Comment picasso image loading and test
 		createMetadata();
 		Assert.assertThat(SongsLibrary.getNextSong("2")
 				.equals("1"), is(true));
 	}
 
-	//Todo need to mock bundle
+	/**
+	 * Dummy data
+	 */
 	private void createMetadata() {
 		List<SongDetails> songList = new ArrayList<>();
 		SongDetails songDetails1 = new SongDetails();
