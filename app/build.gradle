@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 27
     defaultConfig {
-        applicationId "com.talview.sondcast"
+        applicationId "com.talview.soundcast"
         minSdkVersion 21
         targetSdkVersion 27
         versionCode 1
@@ -37,4 +37,5 @@ dependencies {
     implementation 'com.squareup.picasso:picasso:2.71828'
 
     implementation 'com.android.support:cardview-v7:27.1.1'
+    implementation 'com.github.timrijckaert:FloatingMusicActionButton:v2.0.4'
 }

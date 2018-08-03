@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.talview.sondcast">
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.talview.soundcast">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.WAKE_LOCK"/>
 
@@ -16,7 +18,8 @@
         <activity
             android:name=".view.ui.activities.MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -25,17 +28,21 @@
 
         </activity>
 
-        <!-- Main activity for music browsing on phone -->
+        <!--we will start this activity from notification, so add
+        launch mode for stopping this activity from having multiple instance-->
         <activity
             android:name=".view.ui.activities.NowPlayingActivity"
-            android:label="@string/app_name">
+            android:theme="@style/NoActionBarAppTheme"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
 
         </activity>
 
         <service
             android:name=".view.musicplayer.service.MediaService"
             android:enabled="true"
-            android:exported="true">
+            android:exported="true"
+            tools:ignore="ExportedService">
             <intent-filter>
                 <action android:name="android.songDetails.browse.MediaBrowserService"/>
             </intent-filter>

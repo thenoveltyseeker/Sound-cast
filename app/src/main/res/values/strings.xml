@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Sound Cast</string>
+    <string name="song">Song - %s</string>
+    <string name="unknown_artist">Unknown Artist..!</string>
+    <string name="thumbnail">thumbnail</string>
 </resources>

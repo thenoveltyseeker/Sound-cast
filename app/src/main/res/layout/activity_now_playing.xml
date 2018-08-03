@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/match"
+    android:fitsSystemWindows="true"
+    android:layout_marginTop="10dp"
+    tools:context=".view.ui.activities.NowPlayingActivity">
+
+    <ImageView
+        android:id="@+id/back_button"
+        style="@style/wrapper"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:src="@drawable/back_button"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:tint="@color/grey"
+        android:padding="12dp"
+        tools:ignore="ContentDescription"/>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/album_art_container"
+        style="@style/horizFiller"
+        android:layout_below="@+id/back_button"
+        android:layout_margin="16dp"
+        custom:cardElevation="4dp"
+        custom:cardCornerRadius="8dp">
+
+        <ImageView
+            android:id="@+id/album_art"
+            style="@style/horizFiller"
+            android:minHeight="150dp"
+            android:scaleType="centerCrop"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/thumbnail"/>
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            style="@style/progress"
+            android:layout_gravity="center"
+            android:layout_alignParentTop="true"
+            android:visibility="visible"/>
+
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/wrapper"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:fontFamily="@font/roboto_medium"
+        android:layout_below="@+id/album_art_container"
+        android:gravity="center"
+        android:textSize="22sp"
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:id="@+id/song_id"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_medium"
+        android:layout_below="@+id/title"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:drawablePadding="5dp"
+        android:textColor="@color/grey"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"/>
+
+    <android.support.v7.widget.CardView
+        style="@style/horizFiller"
+        android:id="@+id/playback_controls"
+        android:layout_alignParentBottom="true"
+        android:padding="8dp"
+        custom:cardElevation="8dp">
+
+        <LinearLayout
+            style="@style/match"
+            android:layout_gravity="center">
+
+            <ImageButton
+                android:id="@+id/prev"
+                android:layout_width="0dp"
+                android:layout_weight=".33"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="15dp"
+                android:padding="15dp"
+                android:src="@drawable/prev_button"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:tint="@color/colorPrimary"
+                tools:ignore="ContentDescription"/>
+
+            <be.rijckaert.tim.animatedvector.FloatingMusicActionButton
+                android:id="@+id/play_pause"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                custom:useCompatPadding="true"
+                custom:fabCustomSize="55dp"
+                custom:pressedTranslationZ="2dp"
+                custom:backgroundTint="@color/colorPrimary"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:layout_height="wrap_content"/>
+
+            <ImageButton
+                android:id="@+id/next"
+                android:layout_width="0dp"
+                android:layout_weight=".33"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="15dp"
+                android:padding="15dp"
+                android:src="@drawable/next_button"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:tint="@color/colorPrimary"
+                tools:ignore="ContentDescription"/>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>
